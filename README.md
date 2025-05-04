@@ -10,7 +10,7 @@ This is a simple Employer Management System built using  the Django REST Framewo
 
 - Profile View (Current User)
 
-- Employers: Create, Read, Update, Delete (CRUD)
+- Employers: Create, Read, Update, Delete (CRUD) (A user can only access, update, or delete their own employers)
 
 - Protected Endpoints (only accessible to authenticated users)
 
