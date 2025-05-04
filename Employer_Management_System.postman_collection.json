@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "a6316b00-e8f3-4693-af56-538052f7da8c",
+		"name": "Employer Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44643144",
+		"_collection_link": "https://muskanahmed.postman.co/workspace/Muskan-Ahmed's-Workspace~0d5ed348-daac-4a05-85d3-9c6b13968ec4/collection/44643144-a6316b00-e8f3-4693-af56-538052f7da8c?action=share&source=collection_link&creator=44643144"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"arika@example.com\",\r\n  \"full_name\": \"Arika\",\r\n  \"password\": \"arika1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"arika@example.com\",\r\n  \"password\": \"arika1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MzQ1MjQwLCJpYXQiOjE3NDYzNDQ5NDAsImp0aSI6IjI1NzhiOTI2Y2IxYzQwOGJiMzIxY2Y0YmRjMzc5YTQ3IiwidXNlcl9pZCI6MTEsImVtYWlsIjoiYXJpa2FAZXhhbXBsZS5jb20ifQ.TV44Q-Qms0WTTAszNdMfprR9jYeMB8F_5mQEL3Z5R5E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"arika@example.com\",\r\n  \"password\": \"arika1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create employers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MzQ1NTk2LCJpYXQiOjE3NDYzNDUyOTYsImp0aSI6IjlmNGM1N2Q1MzdhODRkM2ZiNjUxNWZmZDg0N2EyMGZjIiwidXNlcl9pZCI6MTEsImVtYWlsIjoiYXJpa2FAZXhhbXBsZS5jb20ifQ.r7sD6aQep3uPqnKgO5g4RBjP8__A1PMRQ0Ngf2C_Rcg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"ABC Group\",\r\n  \"contact_person_name\": \"Alice\",\r\n  \"email\": \"alice@abc.com\",\r\n  \"phone_number\": \"01234567890\",\r\n  \"address\": \"Uttara, Bangladesh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/employers/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"employers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employers List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MzQ2NjMzLCJpYXQiOjE3NDYzNDYzMzMsImp0aSI6ImVlNTQyMDVkYjE3YzQxZjg4ZDM0NmY4MzE3YmI3MTUzIiwidXNlcl9pZCI6MTEsImVtYWlsIjoiYXJpa2FAZXhhbXBsZS5jb20ifQ.8-jGCqeiuK8I7TbU01EykiM8q4x7tfGfPj44RWlAQ2I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"xyz group\",\r\n  \"contact_person_name\": \"santiago\",\r\n  \"email\": \"san@xyz.com\",\r\n  \"phone_number\": \"01234569890\",\r\n  \"address\": \"uttara,bangladesh\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/employers/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"employers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a specific Employer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MzQ1NTk2LCJpYXQiOjE3NDYzNDUyOTYsImp0aSI6IjlmNGM1N2Q1MzdhODRkM2ZiNjUxNWZmZDg0N2EyMGZjIiwidXNlcl9pZCI6MTEsImVtYWlsIjoiYXJpa2FAZXhhbXBsZS5jb20ifQ.r7sD6aQep3uPqnKgO5g4RBjP8__A1PMRQ0Ngf2C_Rcg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"xyz Group\",\r\n  \"contact_person_name\": \"Santiago\",\r\n  \"email\": \"santiago@xyz.com\",\r\n  \"phone_number\": \"01234569990\",\r\n  \"address\": \"banani, Bangladesh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/employers/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"employers",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employer ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MzQ1OTM4LCJpYXQiOjE3NDYzNDU2MzgsImp0aSI6IjAzMWY4MWMxZjc2ZTQzOWM5YWUyZTNiOTRhYzE4MTdiIiwidXNlcl9pZCI6MTEsImVtYWlsIjoiYXJpa2FAZXhhbXBsZS5jb20ifQ.OSywjytRP39m9OabGu67DeEdsb6Kv1HcHx9WlgWZ0bA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"ABC Group\",\r\n  \"contact_person_name\": \"Alice\",\r\n  \"email\": \"alice@abc.com\",\r\n  \"phone_number\": \"01234567890\",\r\n  \"address\": \"gulshan, Bangladesh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/employers/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"employers",
+						"3",
+						""
+					]
+				},
+				"description": "Change the location of ABC group"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a employer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MzQ2NjMzLCJpYXQiOjE3NDYzNDYzMzMsImp0aSI6ImVlNTQyMDVkYjE3YzQxZjg4ZDM0NmY4MzE3YmI3MTUzIiwidXNlcl9pZCI6MTEsImVtYWlsIjoiYXJpa2FAZXhhbXBsZS5jb20ifQ.8-jGCqeiuK8I7TbU01EykiM8q4x7tfGfPj44RWlAQ2I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"xyz group\",\r\n  \"contact_person_name\": \"santiago\",\r\n  \"email\": \"san@xyz.com\",\r\n  \"phone_number\": \"01234569890\",\r\n  \"address\": \"uttara,bangladesh\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/employers/5/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"employers",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
