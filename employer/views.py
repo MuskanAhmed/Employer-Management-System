@@ -71,7 +71,7 @@ def LoginAPIView(request):
             login(request, user)
             refresh = RefreshToken.for_user(user)
             request.session['access_token'] = str(refresh.access_token)
-            return JsonResponse({"message": "Login successful"})
+            return Response({"message": "Login successful"})
 
 
 class EmployerListCreateView(generics.ListCreateAPIView):
